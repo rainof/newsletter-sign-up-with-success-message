@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/newsletter-sign-up-with-success-message-figma
 
 # testing
 /coverage
