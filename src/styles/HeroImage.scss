@@ -1,8 +1,9 @@
 @import '../index.scss';
 
 .hero-image-container {
-
-    #background-image {
-        width: 100%;
+    picture {
+        img {
+            width: 100%;
+        }
     }
 }
