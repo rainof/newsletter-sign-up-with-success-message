@@ -1,34 +1,46 @@
-import React, { useState } from 'react';
-import '../styles/SubscriptionForm.scss';
+import React, { useState } from "react";
+import "../styles/SubscriptionForm.scss";
 
-function SubscriptionForm({formInfo}) {
+function SubscriptionForm({formInfo, onSuccess}) {
 
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    const [email, setEmail] = useState("");
+    const [error, setError] = useState("");
 
-    const handleSubmit = e => {
+    const validateEmail = (email) => {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    };
+
+    const handleSubmit = (e) => {
         e.preventDefault();
 
-        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        if (emailPattern.test(email)) {
-        setMessage(`Thanks for subscribing! A confirmation email has been sent to ${email}.`);
+        if (validateEmail(email)) {
+            setError("");
+            onSuccess();
         } else {
-        setMessage('Please enter a valid email address.');
+            setError("Valid email required");
         }
     };
 
-
     return (
         <div className="form-container">
-            <form onSubmit={handleSubmit}>
-                <p className="form-title">{formInfo.title}</p>
+            <form onSubmit={handleSubmit} noValidate>
+                <div className="form-header">
+                    <p className="form-title">{formInfo.title}</p>
+                    {
+                        error &&
+                        <div className="error-message">{error}</div>
+                    }
+                </div>
                 <input
-                    type="email"
                     id="email"
                     name="email"
+                    type="email"
+                    value={email}
                     placeholder={formInfo.initial}
-                    required
                     onChange={(e) => setEmail(e.target.value)}
+                    className={error ? "input-error" : ""}
+                    required
                 />
                 <button type="submit" id="submit-button">
                     {formInfo.buttonName}

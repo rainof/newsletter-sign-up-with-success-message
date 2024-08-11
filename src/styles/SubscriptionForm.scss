@@ -9,10 +9,21 @@
         display: flex;
         flex-direction: column;
 
-        .form-title {
-            margin-bottom: 0.65rem;
-            font-size: 0.72rem;
-            font-weight: 700;
+        .form-header {
+            display: flex;
+            align-items: center;
+
+            .form-title {
+                margin-right: auto;
+                font-size: 0.72rem;
+                font-weight: 700;
+            }
+
+            .error-message {
+                font-size: 0.72rem;
+                font-weight: 700;
+                color: var(--vermellion);
+            }
         }
 
         input {
@@ -32,9 +43,10 @@
             color: var(--charcoal-grey);
         }
 
-        input:not(:placeholder-shown) {
-            border-color: var(--charcoal-grey);
-            color: var(--charcoal-grey);
+        .input-error {
+            border: var(--vermellion) 2px solid;
+            background-color: var(--vermellion-fill);
+            color: var(--vermellion);
         }
 
         #submit-button {
