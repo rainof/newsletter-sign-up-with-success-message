@@ -12,9 +12,9 @@ function SuccessPage({ successPageInfo, email, onDismiss }) {
             />
             <h1 className="success-title">{successPageInfo.title}</h1>
             <div>
-                <span>{successPageInfo.description_1}</span>
-                <strong>{email}</strong>
-                <span>{successPageInfo.description_2}</span>
+                <span className="success-description-start">{successPageInfo.description_1}</span>
+                <span className="success-description-email"><strong>{email}</strong></span>
+                <span className="success-description-end">{successPageInfo.description_2}</span>
             </div>
             <button
                 type="button"
