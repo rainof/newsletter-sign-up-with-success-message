@@ -11,6 +11,10 @@ body {
         .App {
             width: auto;
             height: auto;
+
+            .main-container {
+                display: none;
+            }
         }
     }
 }

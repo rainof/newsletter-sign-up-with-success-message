@@ -1,0 +1,42 @@
+.success-page-container {
+    margin-top: 9.4rem;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+    .success-img {
+        width: 4rem;
+        margin-bottom: 2.2rem;
+    }
+
+    .success-title {
+        font-size: 2.34rem;
+        margin: 0 0 1.4rem 0;
+    }
+
+    .success-description {
+        margin: 0 0 10rem 0;
+        font-size: 0.96rem;
+        line-height: 1.5rem;
+        // letter-spacing: 0.01rem;
+    }
+
+    // #dismiss {
+
+    // }
+
+    #dismiss-button {
+        padding: 1.25rem 1.3rem;
+        border-style: none;
+        border-radius: 10px;
+        background-color: var(--dark-slate-grey);
+        color: var(--white);
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-top: 6.3rem;
+    }
+
+    #dismiss-button:hover {
+        background: linear-gradient(to right, var(--hot-pink), var(--vermellion));
+    }
+}

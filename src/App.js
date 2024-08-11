@@ -13,10 +13,14 @@ function App({ contentInfo, formInfo, successPageInfo }) {
 
   return (
     <div className="App">
-      <HeroImage />
-      <MainContent contentInfo={contentInfo} />
-      <SubscriptionForm formInfo={formInfo} onSuccess={handleSuccess} />
-      <SuccessPage successPageInfo={successPageInfo} />
+      <div className="main-container">
+        <HeroImage />
+        <MainContent contentInfo={contentInfo} />
+        <SubscriptionForm formInfo={formInfo} onSuccess={handleSuccess} />
+      </div>
+      <div>
+        <SuccessPage successPageInfo={successPageInfo} />
+      </div>
     </div>
   );
 }
