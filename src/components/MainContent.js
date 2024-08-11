@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/MainContent.scss';
 
-function MainContent({contentInfo}) {
+function MainContent({ contentInfo }) {
     return (
         <div className="content-container">
             <h1 className="content-title">{contentInfo.title}</h1>

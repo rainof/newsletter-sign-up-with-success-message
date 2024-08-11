@@ -2,7 +2,7 @@ import React from 'react';
 import "../styles/SuccessPage.scss";
 import successImage from '../assets/images/icon-success.svg';
 
-function SuccessPage({successPageInfo}) {
+function SuccessPage({ successPageInfo, email, onDismiss }) {
     return (
         <div className="success-page-container">
             <img
@@ -11,8 +11,19 @@ function SuccessPage({successPageInfo}) {
                 alt="success"
             />
             <h1 className="success-title">{successPageInfo.title}</h1>
-            <p className="success-description" dangerouslySetInnerHTML={{ __html: successPageInfo.description }} />
-            <button type="button" name="dismiss" id="dismiss-button">{successPageInfo.buttonName}</button>
+            <div>
+                <span>{successPageInfo.description_1}</span>
+                <strong>{email}</strong>
+                <span>{successPageInfo.description_2}</span>
+            </div>
+            <button
+                type="button"
+                name="dismiss"
+                id="dismiss-button"
+                onClick={onDismiss}
+            >
+                {successPageInfo.buttonName}
+            </button>
         </div>
     )
 }

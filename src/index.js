@@ -24,7 +24,8 @@ const formInfo = {
 
 const successPageInfo = {
   title: "Thanks for subscribing!",
-  description: "A confirmation email has been sent to <strong>ash@loremcompany.com.</strong> Please open it and click the button inside to confirm your subscription.",
+  description_1: "A confirmation email has been sent to ",
+  description_2: ". Please open it and click the button inside to confirm your subscription.",
   buttonName: "Dismiss message"
 };
 

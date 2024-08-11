@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "../styles/SubscriptionForm.scss";
 
-function SubscriptionForm({formInfo, onSuccess}) {
-
-    const [email, setEmail] = useState("");
+function SubscriptionForm({ formInfo, onSuccess, email, setEmail }) {
     const [error, setError] = useState("");
 
     const validateEmail = (email) => {
@@ -17,6 +15,7 @@ function SubscriptionForm({formInfo, onSuccess}) {
         if (validateEmail(email)) {
             setError("");
             onSuccess();
+            console.log("Submitted!")
         } else {
             setError("Valid email required");
         }
