@@ -4,8 +4,6 @@ import heroMobileImage from '../assets/images/illustration-sign-up-mobile.svg';
 import heroDesktopImage from '../assets/images/illustration-sign-up-desktop.svg';
 
 function HeroImage() {
-    // const isMobile = window.innerWidth < 900;
-
     return (
         <div className="hero-image-container">
             <picture>

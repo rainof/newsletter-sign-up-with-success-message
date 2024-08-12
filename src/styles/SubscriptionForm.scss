@@ -65,3 +65,71 @@
         }
     }
 }
+
+@media (min-width: 900px) {
+    .form-container {
+        padding: 0 2.1rem 3.2rem 2.1rem;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            .form-header {
+                display: flex;
+                align-items: center;
+
+                .form-title {
+                    margin-right: auto;
+                    font-size: 0.47rem;
+                    font-weight: 700;
+                }
+
+                .error-message {
+                    font-size: 0.72rem;
+                    font-weight: 700;
+                    color: var(--vermellion);
+                }
+            }
+
+            input {
+                padding: 0.7rem 1.3rem;
+                margin-bottom: 1rem;
+                border-radius: 5px;
+                border: var(--light-grey) 1px solid;
+                font-size: 0.65rem;
+            }
+
+            input::placeholder {
+                color: var(--light-grey);
+            }
+
+            input:focus {
+                border-color: var(--charcoal-grey);
+                color: var(--charcoal-grey);
+            }
+
+            .input-error {
+                border: var(--vermellion) 2px solid;
+                background-color: var(--vermellion-fill);
+                color: var(--vermellion);
+            }
+
+            #submit-button {
+                padding: 0.8rem 1.3rem;
+                border-style: none;
+                border-radius: 5px;
+                background-color: var(--dark-slate-grey);
+                color: var(--white);
+                font-size: 0.59rem;
+                font-weight: 700;
+            }
+
+            #submit-button:hover {
+                background: linear-gradient(to right, var(--hot-pink), var(--vermellion));
+            }
+        }
+    }
+}
